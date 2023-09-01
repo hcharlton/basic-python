@@ -42,17 +42,20 @@ if len(sys.argv) < 2:
 match sys.argv[1]:
     case "mean":
         # put your solution to the first exercise here
-        mean = "mean of x"
+        sum = 0
+        for i in x:
+            sum += i
+        mean = sum / len(x)
         print(mean)
 
     case "times":
         # Put your solution to the second exercise here
-        times_three = []
+        times_three = [3 * i for i in x]
         print_list(times_three)
 
     case "even":
         # Put your solution to the third exercise here
-        even = []
+        even = [i for i in x if i % 2 ==0]
         print_list(even)
 
     case _:

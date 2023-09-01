@@ -5,8 +5,13 @@ if len(sys.argv) != 2:
     sys.exit(1)
 
 password = sys.argv[1]
-is_valid = False
-
+print(password)
 # Do all the requirement checks here.
+isvalid = all([any(char.islower() for char in password),
+                any(char.isupper() for char in password), 
+                any(char.isnumeric() for char in password), 
+                "$" in password or "#" in password or "@" in password,
+                len(password)>5,
+                len(password)<17])
+print(isvalid)
 
-print(is_valid)

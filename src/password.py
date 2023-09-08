@@ -5,7 +5,7 @@ if len(sys.argv) != 2:
     sys.exit(1)
 
 password = sys.argv[1]
-print(password)
+
 # Do all the requirement checks here.
 isvalid = all([any(char.islower() for char in password),
                 any(char.isupper() for char in password), 
